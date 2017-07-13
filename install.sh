@@ -7,7 +7,7 @@
 
 set -e
 
-URL="https://github.com/SmartFinn/eve-ng-integration/archive/master.tar.gz"
+URL="https://github.com/etem/eve-ng-integration/archive/master.tar.gz"
 
 # add sudo if user is not root
 [ "$(whoami)" = root ] || SUDO="sudo"
