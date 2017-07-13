@@ -77,7 +77,7 @@ def main(argv):
     if url.scheme == 'capture':
         cmd = 'ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no \
               -l root {host} tcpdump -i {path} -n -s 0 -U -w -'.format(**data)
-        wireshark_cmd = 'wireshark -k -i -'
+        wireshark_cmd = 'wireshark-gtk -k -i -'
 
         tcpdump = Popen(cmd.split(), stdout=PIPE)
         wireshark = Popen(wireshark_cmd.split(), stdin=tcpdump.stdout)
